@@ -45,6 +45,11 @@ body {
     width: 64px;             /* Give container a fixed width */
     height: 64px;            /* Give container a fixed height */
     padding: 0;              /* Remove old padding */
+    background-color: rgba(30, 41, 59, 0.2);
+    border-radius: 16px;
+    border: 1px solid #1e293b;
+    cursor: pointer;
+    position: relative;
 }
 
 /* This new rule targets ALL icons inside the container */
