@@ -27,7 +27,7 @@ body {
 
 .chat-bot-container {
     width: 40%;
-    height: 100vh; /* Full height on desktop */
+    height: 100vh;
     flex-shrink: 0;
 }
 
@@ -36,6 +36,27 @@ body {
     height: 100%;
     border: none;
 }
+
+/* === NEW SECTION TO FIX ICON SIZES === */
+.topic-icon {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    width: 64px;             /* Give container a fixed width */
+    height: 64px;            /* Give container a fixed height */
+    padding: 0;              /* Remove old padding */
+}
+
+/* This new rule targets ALL icons inside the container */
+.topic-icon svg,
+.topic-icon img {
+    width: 28px !important;    /* Force a uniform width */
+    height: 28px !important;   /* Force a uniform height */
+    object-fit: contain;     /* Ensure image scales properly */
+    border-radius: 4px;      /* Slightly rounded corners for all logos */
+}
+/* === END OF NEW SECTION === */
+
 
 .project-heading .heading {
     background-image: url(https://framerusercontent.com/images/2IaeICXvsJApqTXCae1q1dVMVIE.jpg);
@@ -101,22 +122,12 @@ body {
     gap: 24px;
 }
 
-.topic-icon {
-    display: flex;
-    padding: 20px 16px;
-    background-color: rgba(30, 41, 59, 0.2);
-    border-radius: 16px;
-    border: 1px solid #1e293b;
-    cursor: pointer;
-    position: relative;
-}
-
 .footer-section {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 16px;
-    margin-top: auto; /* Pushes footer to the bottom */
+    margin-top: auto;
 }
 
 @keyframes beating {
@@ -229,21 +240,21 @@ ul {
 }
 .zoom-svg { pointer-events: none; }
 
-/* === FINAL, CORRECTED MOBILE VIEW STYLES === */
+/* Mobile View Styles */
 @media screen and (max-width: 950px) {
     .main-container {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column;
     }
 
     .description-container {
-        width: 100%; /* Take full width */
-        height: auto; /* Let height be determined by content */
+        width: 100%;
+        height: auto;
         padding: 40px 24px;
     }
 
     .chat-bot-container {
-        width: 100%; /* Take full width */
-        height: 75vh; /* 75% of the viewport height */
+        width: 100%;
+        height: 75vh;
         padding: 0;
     }
 
@@ -257,7 +268,7 @@ ul {
         flex-direction: column;
         align-items: center;
         gap: 16px;
-        padding: 24px; /* Add some space around the mobile footer */
+        padding: 24px;
     }
     .share-now {
         flex-direction: column;
